@@ -171,7 +171,7 @@ check_nvim_version() {
 
 clone_repo() {
     if check_nvim_version "${REQUIRED_NVIM_VERSION}"; then
-        execute "git" "clone" "-b" "main" "${CLONE_ATTR[@]}" "https://github.com/ygc666666/nvimdots-ch.git" "${DEST_DIR}"
+        execute "git" "clone" "-b" "master" "${CLONE_ATTR[@]}" "https://github.com/ygc666666/nvimdots-ch.git" "${DEST_DIR}"
     elif check_nvim_version "${REQUIRED_NVIM_VERSION_LEGACY}"; then
         warn "You have outdated Nvim installed (< ${REQUIRED_NVIM_VERSION})."
         info "Automatically redirecting you to the latest compatible version..."
