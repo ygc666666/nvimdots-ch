@@ -33,22 +33,22 @@ settings["format_modifications_only"] = false
 -- 注意：目录会自动规范化。|vim.fs.normalize()|
 ---@type string[]
 settings["format_disabled_dirs"] = {
-    -- 示例
-    "~/format_disabled_dir",
+	-- 示例
+	"~/format_disabled_dir",
 }
 
 -- 此列表中的文件类型将跳过 lsp 格式化，如果右侧值为 true。
 ---@type table<string, boolean>
 settings["formatter_block_list"] = {
-    lua = false, -- 示例
+	lua = false, -- 示例
 }
 
 -- 此列表中的服务器将跳过设置格式化功能，如果右侧值为 true。
 ---@type table<string, boolean>
 settings["server_formatting_block_list"] = {
-    clangd = true,
-    lua_ls = true,
-    ts_ls = true,
+	clangd = true,
+	lua_ls = true,
+	ts_ls = true,
 }
 
 -- 如果你想关闭 LSP 内联提示，请将其设置为 false。
@@ -108,13 +108,13 @@ settings["external_browser"] = "chrome-cli open"
 -- https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/server_configurations
 ---@type string[]
 settings["lsp_deps"] = {
-    "bashls",
-    "clangd",
-    "html",
-    "jsonls",
-    "lua_ls",
-    "pylsp",
-    "gopls",
+	"bashls",
+	"clangd",
+	"html",
+	"jsonls",
+	"lua_ls",
+	"pyright",
+	"gopls",
 }
 
 -- 在此处设置在引导期间将安装的通用服务器。
@@ -123,13 +123,13 @@ settings["lsp_deps"] = {
 -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins
 ---@type string[]
 settings["null_ls_deps"] = {
-    "clang_format",
-    "gofumpt",
-    "goimports",
-    "prettier",
-    "shfmt",
-    "stylua",
-    "vint",
+	"clang_format",
+	"gofumpt",
+	"goimports",
+	"prettier",
+	"shfmt",
+	"stylua",
+	"vint",
 }
 
 -- 在此处设置在引导期间将安装和配置的调试适配器协议（DAP）客户端。
@@ -137,9 +137,9 @@ settings["null_ls_deps"] = {
 -- https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
 ---@type string[]
 settings["dap_deps"] = {
-    "codelldb", -- C 家族
-    "delve", -- Go
-    "python", -- Python (debugpy)
+	"codelldb", -- C 家族
+	"delve", -- Go
+	"python", -- Python (debugpy)
 }
 
 -- 在此处设置在引导期间将安装的 Treesitter 解析器。
@@ -147,35 +147,35 @@ settings["dap_deps"] = {
 -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
 ---@type string[]
 settings["treesitter_deps"] = {
-    "bash",
-    "c",
-    "cpp",
-    "css",
-    "go",
-    "gomod",
-    "html",
-    "javascript",
-    "json",
-    "jsonc",
-    "latex",
-    "lua",
-    "make",
-    "markdown",
-    "markdown_inline",
-    "python",
-    "rust",
-    "typescript",
-    "vimdoc",
-    "vue",
-    "yaml",
+	"bash",
+	"c",
+	"cpp",
+	"css",
+	"go",
+	"gomod",
+	"html",
+	"javascript",
+	"json",
+	"jsonc",
+	"latex",
+	"lua",
+	"make",
+	"markdown",
+	"markdown_inline",
+	"python",
+	"rust",
+	"typescript",
+	"vimdoc",
+	"vue",
+	"yaml",
 }
 
 -- 在此处设置 neovim 的 GUI 客户端（如 `neovide` 和 `neovim-qt`）的选项。
 -- 注意：目前，仅支持以下与 GUI 相关的选项。其他条目将被忽略。
 ---@type { font_name: string, font_size: number }
 settings["gui_config"] = {
-    font_name = "JetBrainsMono Nerd Font",
-    font_size = 12,
+	font_name = "JetBrainsMono Nerd Font",
+	font_size = 12,
 }
 
 -- 在此处设置特定于 `neovide` 的选项。
@@ -184,16 +184,16 @@ settings["gui_config"] = {
 -- https://neovide.dev/configuration.html
 ---@type table<string, boolean|number|string>
 settings["neovide_config"] = {
-    no_idle = true,
-    refresh_rate = 120,
-    cursor_vfx_mode = "railgun",
-    cursor_vfx_opacity = 200.0,
-    cursor_antialiasing = true,
-    cursor_trail_length = 0.05,
-    cursor_animation_length = 0.03,
-    cursor_vfx_particle_speed = 20.0,
-    cursor_vfx_particle_density = 5.0,
-    cursor_vfx_particle_lifetime = 1.2,
+	no_idle = true,
+	refresh_rate = 120,
+	cursor_vfx_mode = "railgun",
+	cursor_vfx_opacity = 200.0,
+	cursor_antialiasing = true,
+	cursor_trail_length = 0.05,
+	cursor_animation_length = 0.03,
+	cursor_vfx_particle_speed = 20.0,
+	cursor_vfx_particle_density = 5.0,
+	cursor_vfx_particle_lifetime = 1.2,
 }
 
 -- 在此处设置启动仪表板的启动图像
@@ -201,25 +201,25 @@ settings["neovide_config"] = {
 -- 更多信息：https://github.com/ayamir/nvimdots/wiki/Issues#change-dashboard-startup-image
 ---@type string[]
 settings["dashboard_image"] = {
-    [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣡⣾⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣟⠻⣿⣿⣿⣿⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⣿⣿⡿⢫⣷⣿⣿⣿⣿⣿⣿⣿⣾⣯⣿⡿⢧⡚⢷⣌⣽⣿⣿⣿⣿⣿⣶⡌⣿⣿⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⣿⣿⠇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⣇⣘⠿⢹⣿⣿⣿⣿⣿⣻⢿⣿⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⣿⣿⠀⢸⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⡟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣻⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⣿⡇⠀⣬⠏⣿⡇⢻⣿⣿⣿⣿⣿⣿⣿⣷⣼⣿⣿⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⣿⠀⠈⠁⠀⣿⡇⠘⡟⣿⣿⣿⣿⣿⣿⣿⣿⡏⠿⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣇⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⡏⠀⠀⠐⠀⢻⣇⠀⠀⠹⣿⣿⣿⣿⣿⣿⣩⡶⠼⠟⠻⠞⣿⡈⠻⣟⢻⣿⣿⣿⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⢿⠀⡆⠀⠘⢿⢻⡿⣿⣧⣷⢣⣶⡃⢀⣾⡆⡋⣧⠙⢿⣿⣿⣟⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⡥⠂⡐⠀⠁⠑⣾⣿⣿⣾⣿⣿⣿⡿⣷⣷⣿⣧⣾⣿⣿⣿⣿⣿⣿⣿]],
-    [[⣿⣿⡿⣿⣍⡴⠆⠀⠀⠀⠀⠀⠀⠀⠀⣼⣄⣀⣷⡄⣙⢿⣿⣿⣿⣿⣯⣶⣿⣿⢟⣾⣿⣿⢡⣿⣿⣿⣿⣿]],
-    [[⣿⡏⣾⣿⣿⣿⣷⣦⠀⠀⠀⢀⡀⠀⠀⠠⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⣡⣾⣿⣿⢏⣾⣿⣿⣿⣿⣿⣿]],
-    [[⣿⣿⣿⣿⣿⣿⣿⣿⡴⠀⠀⠀⠀⠀⠠⠀⠰⣿⣿⣿⣷⣿⠿⠿⣿⣿⣭⡶⣫⠔⢻⢿⢇⣾⣿⣿⣿⣿⣿⣿]],
-    [[⣿⣿⣿⡿⢫⣽⠟⣋⠀⠀⠀⠀⣶⣦⠀⠀⠀⠈⠻⣿⣿⣿⣾⣿⣿⣿⣿⡿⣣⣿⣿⢸⣾⣿⣿⣿⣿⣿⣿⣿]],
-    [[⡿⠛⣹⣶⣶⣶⣾⣿⣷⣦⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠉⠛⠻⢿⣿⡿⠫⠾⠿⠋⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
-    [[⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⡆⣠⢀⣴⣏⡀⠀⠀⠀⠉⠀⠀⢀⣠⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
-    [[⠿⠛⠛⠛⠛⠛⠛⠻⢿⣿⣿⣿⣿⣯⣟⠷⢷⣿⡿⠋⠀⠀⠀⠀⣵⡀⢠⡿⠋⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
-    [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⢿⣿⣿⠂⠀⠀⠀⠀⠀⢀⣽⣿⣿⣿⣿⣿⣿⣿⣍⠛⠿⣿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣡⣾⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣟⠻⣿⣿⣿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⣿⣿⡿⢫⣷⣿⣿⣿⣿⣿⣿⣿⣾⣯⣿⡿⢧⡚⢷⣌⣽⣿⣿⣿⣿⣿⣶⡌⣿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⣿⣿⠇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⣇⣘⠿⢹⣿⣿⣿⣿⣿⣻⢿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⣿⣿⠀⢸⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⡟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣻⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⣿⡇⠀⣬⠏⣿⡇⢻⣿⣿⣿⣿⣿⣿⣿⣷⣼⣿⣿⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⣿⠀⠈⠁⠀⣿⡇⠘⡟⣿⣿⣿⣿⣿⣿⣿⣿⡏⠿⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣇⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⡏⠀⠀⠐⠀⢻⣇⠀⠀⠹⣿⣿⣿⣿⣿⣿⣩⡶⠼⠟⠻⠞⣿⡈⠻⣟⢻⣿⣿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⢿⠀⡆⠀⠘⢿⢻⡿⣿⣧⣷⢣⣶⡃⢀⣾⡆⡋⣧⠙⢿⣿⣿⣟⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⡥⠂⡐⠀⠁⠑⣾⣿⣿⣾⣿⣿⣿⡿⣷⣷⣿⣧⣾⣿⣿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⡿⣿⣍⡴⠆⠀⠀⠀⠀⠀⠀⠀⠀⣼⣄⣀⣷⡄⣙⢿⣿⣿⣿⣿⣯⣶⣿⣿⢟⣾⣿⣿⢡⣿⣿⣿⣿⣿]],
+	[[⣿⡏⣾⣿⣿⣿⣷⣦⠀⠀⠀⢀⡀⠀⠀⠠⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⣡⣾⣿⣿⢏⣾⣿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⣿⣿⣿⣿⣿⣿⡴⠀⠀⠀⠀⠀⠠⠀⠰⣿⣿⣿⣷⣿⠿⠿⣿⣿⣭⡶⣫⠔⢻⢿⢇⣾⣿⣿⣿⣿⣿⣿]],
+	[[⣿⣿⣿⡿⢫⣽⠟⣋⠀⠀⠀⠀⣶⣦⠀⠀⠀⠈⠻⣿⣿⣿⣾⣿⣿⣿⣿⡿⣣⣿⣿⢸⣾⣿⣿⣿⣿⣿⣿⣿]],
+	[[⡿⠛⣹⣶⣶⣶⣾⣿⣷⣦⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠉⠛⠻⢿⣿⡿⠫⠾⠿⠋⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
+	[[⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⡆⣠⢀⣴⣏⡀⠀⠀⠀⠉⠀⠀⢀⣠⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
+	[[⠿⠛⠛⠛⠛⠛⠛⠻⢿⣿⣿⣿⣿⣯⣟⠷⢷⣿⡿⠋⠀⠀⠀⠀⣵⡀⢠⡿⠋⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
+	[[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⢿⣿⣿⠂⠀⠀⠀⠀⠀⢀⣽⣿⣿⣿⣿⣿⣿⣿⣍⠛⠿⣿⣿⣿⣿⣿⣿]],
 }
 
 return require("modules.utils").extend_config(settings, "user.settings")

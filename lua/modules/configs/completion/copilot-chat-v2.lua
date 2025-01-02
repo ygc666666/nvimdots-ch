@@ -198,3 +198,4 @@ return {
     --   { "<leader>aa", "<cmd>CopilotChatAgents<cr>", desc = "CopilotChat - Select Agents" },
     },
   }
+}

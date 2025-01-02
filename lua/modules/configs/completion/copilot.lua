@@ -7,14 +7,14 @@ return function()
 			},
 			panel = {
 				-- if true, it can interfere with completions in copilot-cmp
-				enabled = false,
+				enabled = true,
 			},
 			suggestion = {
 				-- if true, it can interfere with completions in copilot-cmp
-				enabled = false,
+				enabled = true,
 			},
 			filetypes = {
-				["bigfile"] = false,
+				["bigfile"] = true,
 				["dap-repl"] = false,
 				["fugitive"] = false,
 				["fugitiveblame"] = false,

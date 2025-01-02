@@ -10,7 +10,7 @@
 ---@field buffer boolean|number -- 是否是缓冲区映射或缓冲区编号
 local rhs_options = {}
 
--- 创建一个新的 rhs_options 实例
+-- 创建一个新的 rhs_options 实例，初始化选项，命令字符串为空
 function rhs_options:new()
     local instance = {
         cmd = "", -- 初始化命令为空字符串

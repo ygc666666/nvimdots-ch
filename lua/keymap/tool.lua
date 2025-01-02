@@ -53,6 +53,9 @@ local plug_map = {
     ["n|<C-n>"] = map_cr("NvimTreeToggle"):with_noremap():with_silent():with_desc("文件树: 切换"), -- 切换文件树
     ["n|<leader>nf"] = map_cr("NvimTreeFindFile"):with_noremap():with_silent():with_desc("文件树: 定位文件"), -- 定位文件
     ["n|<leader>nr"] = map_cr("NvimTreeRefresh"):with_noremap():with_silent():with_desc("文件树: 刷新"), -- 刷新文件树
+    
+    
+
 
     -- 插件: sniprun
     ["v|<leader>r"] = map_cr("SnipRun"):with_noremap():with_silent():with_desc("工具: 运行代码（选中范围）"), -- 运行代码（选中范围）

@@ -170,21 +170,21 @@ check_nvim_version() {
 }
 
 clone_repo() {
-	if check_nvim_version "${REQUIRED_NVIM_VERSION}"; then
-		execute "git" "clone" "-b" "main" "${CLONE_ATTR[@]}" "$1" "${DEST_DIR}"
-	elif check_nvim_version "${REQUIRED_NVIM_VERSION_LEGACY}"; then
-		warn "You have outdated Nvim installed (< ${REQUIRED_NVIM_VERSION})."
-		info "Automatically redirecting you to the latest compatible version..."
-		execute "git" "clone" "-b" "0.9" "${CLONE_ATTR[@]}" "$1" "${DEST_DIR}"
-	else
-		warn "You have outdated Nvim installed (< ${REQUIRED_NVIM_VERSION_LEGACY})."
-		abort "$(
-			cat <<EOABORT
+    if check_nvim_version "${REQUIRED_NVIM_VERSION}"; then
+        execute "git" "clone" "-b" "main" "${CLONE_ATTR[@]}" "https://github.com/ygc666666/nvimdots-ch.git" "${DEST_DIR}"
+    elif check_nvim_version "${REQUIRED_NVIM_VERSION_LEGACY}"; then
+        warn "You have outdated Nvim installed (< ${REQUIRED_NVIM_VERSION})."
+        info "Automatically redirecting you to the latest compatible version..."
+        execute "git" "clone" "-b" "0.9" "${CLONE_ATTR[@]}" "https://github.com/ygc666666/nvimdots-ch.git" "${DEST_DIR}"
+    else
+        warn "You have outdated Nvim installed (< ${REQUIRED_NVIM_VERSION_LEGACY})."
+        abort "$(
+            cat <<EOABORT
 You have a legacy Neovim distribution installed.
 Please make sure you have nvim v${REQUIRED_NVIM_VERSION_LEGACY} installed at the very least.
 EOABORT
-		)"
-	fi
+        )"
+    fi
 }
 
 # Check if both `INTERACTIVE` and `NONINTERACTIVE` are set
@@ -246,7 +246,7 @@ if [[ -n "${NONINTERACTIVE-}" ]]; then
 	USE_SSH=0
 fi
 
-info "This script will install ayamir/nvimdots to:"
+info "This script will install ygc666666/nvimdots-ch to:"
 echo "${DEST_DIR}"
 
 if [[ -d "${DEST_DIR}" ]]; then
@@ -270,9 +270,9 @@ fi
 
 info "Fetching in progress..."
 if [[ "${USE_SSH}" -eq "1" ]]; then
-	clone_repo "git@github.com:ayamir/nvimdots.git"
+    clone_repo "git@github.com:ygc666666/nvimdots-ch.git"
 else
-	clone_repo "https://github.com/ayamir/nvimdots.git"
+    clone_repo "https://github.com/ygc666666/nvimdots-ch.git"
 fi
 
 cd "${DEST_DIR}" || return
@@ -292,9 +292,9 @@ cat <<EOS
 
 Thank you for using this set of configuration!
 - Project Homepage:
-    ${tty_underline}https://github.com/ayamir/nvimdots${tty_reset}
+    ${tty_underline}https://github.com/ygc666666/nvimdots-ch${tty_reset}
 - Further documentation (including executables you ${tty_bold}must${tty_reset} install for full functionality):
-    ${tty_underline}https://github.com/ayamir/nvimdots/wiki/Prerequisites${tty_reset}
+    ${tty_underline}https://github.com/ygc666666/nvimdots-ch/wiki/Prerequisites${tty_reset}
 EOS
 
 if [[ -z "${NONINTERACTIVE-}" ]]; then
