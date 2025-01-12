@@ -31,7 +31,7 @@ tool["nvim-tree/nvim-tree.lua"] = {
 	config = require("tool.nvim-tree"),
 }
 tool["ibhagwan/smartyank.nvim"] = {
-	lazy = true,
+	lazy = false,
 	event = "BufReadPost",
 	config = require("tool.smartyank"),
 }
@@ -135,6 +135,18 @@ tool["mfussenegger/nvim-dap"] = {
 		},
 		{ "jay-babu/mason-nvim-dap.nvim" },
 	},
+}
+
+----------------------------------------------------------------------
+--                           git-conflict Plugins                            --
+----------------------------------------------------------------------
+-- tool["3rd/image.nvim"] = {
+-- 	lazy = true,
+-- 	config = require("tool.image"),
+-- }
+tool["akinsho/git-conflict.nvim"] = {
+	lazy = true,
+	config = require("tool.git-conflict"),
 }
 
 return tool
